@@ -1,0 +1,9 @@
+<p>
+  <h2><%= post.title %></h2>
+  <p><%= post.body %></p>
+  <% if logged_in? %>
+    <p>Author: <%= post.user.name %></p>
+  <% end %>
+  <p>Posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+</p>
+<hr>
