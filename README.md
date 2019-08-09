@@ -2,7 +2,11 @@
 
 An Odin Project for learning Authentication in Ruby & Rail.
 
-[Link to Project Requirement](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
+- [Link to Project Requirement](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
+
+- [Project Reference - Rails Tutorials-Basic Login](https://www.railstutorial.org/book/basic_login)
+
+- [Project Reference - Rails Tutorials-Advance Login](https://www.railstutorial.org/book/advanced_login)
 
 ## note
 
