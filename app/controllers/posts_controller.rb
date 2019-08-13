@@ -8,9 +8,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    # p "check-params-post-create"
-    # # p params
-    # p post_params
     
     if @post.save
       redirect_to root_url

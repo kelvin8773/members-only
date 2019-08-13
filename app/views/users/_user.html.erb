@@ -1,0 +1,17 @@
+<div class="card col-md-3">
+  <%= gravatar_for user, size: 100, class: "card-img-top"%>
+  <div class="card-body">
+    <h4 class="card-title"><%= link_to user.name, user %></h4>
+
+    <p class="card-text" ><%= link_to user.email %> </p>
+    <p class="card-text text-muted" >Created at: <%= time_ago_in_words(user.created_at) %> ago.</p>
+
+    <% if current_user.admin? && !is_current_user?(user) %>
+     <%= link_to "Delete", user, method: :delete, 
+                                  data: { confirm: "You sure?"},
+                                  class: "btn btn-danger" %>
+    <% end %>
+
+    
+  </div>
+</div>
