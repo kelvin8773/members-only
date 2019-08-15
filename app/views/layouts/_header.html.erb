@@ -1,0 +1,18 @@
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+      <a class="navbar-brand" href="#">Members Only</a>
+   <nav>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Home", root_path %></li>
+      <% if logged_in? %>
+        <li><%= link_to "User Profile", "/users/show" %></li>
+        <li><%= link_to "Sign Out", logout_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign In", login_path %></li>
+        <li><%= link_to "Sign up", signup_path %></li> 
+      <% end %>
+    </ul>
+  </nav>
+  </div>
+</header>

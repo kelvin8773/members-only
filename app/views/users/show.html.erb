@@ -1,0 +1,15 @@
+<h1>User Profile</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+   <h2> 
+   <%= gravatar_for @user %>
+   <%= @user.name %> 
+   </h2>
+
+   <h4>Email:  <%= @user.email %> </h4>
+   <p>Created at: <%= time_ago_in_words(@user.created_at) %> ago.</p>
+
+  </div>
+</div>
+
