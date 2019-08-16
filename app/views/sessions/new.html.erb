@@ -1,3 +1,6 @@
+<% provide(:title, "Log In" )%>
+
+
 <div class="container">
   <h1>Log in</h1>
   ​
@@ -17,10 +20,11 @@
   ​      
         <br>
         <%= f.submit "Log in", class: "btn btn-primary" %>
-      <% end %><br>
+      <% end %>
+      
+      <br>
+      <p>New user? <%= link_to "Sign up now", signup_path %></p>
 
-      <p>New user? <%= link_to "Sign up now", signup_path %></p> 
-  ​
     </div>
   </div>
 
