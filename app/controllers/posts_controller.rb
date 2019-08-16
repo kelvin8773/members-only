@@ -22,14 +22,14 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
-  private
-
-  def logged_in_user
-    unless logged_in?
-      flash[:error] = "Please sign in first!"
-      redirect_to login_path
-    end
+  def destroy
+    # @micropost.destroy
+    Post.find(params[:id]).destroy
+    flash[:success] = "Your Post Has Been Deleted."
+    redirect_to request.referrer || root_url
   end
+
+  private
 
   def post_params
     params.require(:post).permit(:title, :body, :user_id)
