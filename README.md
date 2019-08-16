@@ -2,6 +2,8 @@
 
 An Odin Project for learning Authentication in Ruby & Rail.
 
+- [Project Demo](https://member-only-873.herokuapp.com)
+
 - [Link to Project Requirement](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
 
 - [Project Reference - Rails Tutorials-Basic Login](https://www.railstutorial.org/book/basic_login)

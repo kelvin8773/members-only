@@ -8,6 +8,12 @@
     <% end %>
 
     <p class="post-time">Posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+    <% if is_current_user?(post.user) %>
+      <%= link_to "delete", post, method: :delete,
+                                       data: { confirm: "You sure?" },
+                                       class: "btn btn-warning" %>
+    <% end %>
+
   </div>
 
 </div>
