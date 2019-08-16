@@ -1,7 +1,9 @@
+<% provide(:title, @user.name )%>
+
 <h1>User Profile</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-4">
    <h2> 
    <%= gravatar_for @user %>
    <%= @user.name %> 
@@ -10,6 +12,21 @@
    <h4>Email:  <%= @user.email %> </h4>
    <p>Created at: <%= time_ago_in_words(@user.created_at) %> ago.</p>
 
+   <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-success" %>
+
   </div>
+
+  <div class="col-md-8">
+    <% if @user.posts.any? %>
+      <h3>Your Post (<%= @posts.count %>)</h3>
+      <ol class="post">
+        <%= render @posts %>
+      </ol>
+    <% end %>
+  </div>
+
+
 </div>
+
+
 
